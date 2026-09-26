@@ -81,7 +81,15 @@ public class ManageStudent {
 
     // 10) Expandable Array: return a new array with one more slot and append student
     public static Student[] appendStudent(Student[] students, Student newStudent) {
+        Student[] newStudents = new Student[students.length+1];  // creating new array with an addiotional slot
 
+        // copying the elements of the old array
+        for (int i = 0; i < students.length; i++){
+            newStudents[i] = students[i];
+        }
+        newStudents[students.length] = newStudent;  // adding the new student
+
+        return newStudents;
     }
 
     // 1) Create an Array of Students + demos for all tasks
