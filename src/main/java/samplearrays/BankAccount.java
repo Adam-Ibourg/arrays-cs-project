@@ -51,7 +51,7 @@ public class BankAccount {
     }
 
     public void displayBalance(){
-
+        System.out.println("Current balance: " + currentBalance);  // displays the current balance
     }
 
     public static void main(String[] args) {
