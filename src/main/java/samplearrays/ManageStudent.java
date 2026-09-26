@@ -37,7 +37,10 @@ public class ManageStudent {
 
     // 5) Search by Name (case-sensitive; change to equalsIgnoreCase if desired)
     public static Student findStudentByName(Student[] students, String name) {
-
+        for (Student s: students){
+            if (s.getName().equalsIgnoreCase(name)) return s;
+        }
+        return null;
     }
 
     // 6) Sort Students by Grade (descending)
