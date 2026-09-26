@@ -50,7 +50,9 @@ public class ManageStudent {
 
     // 7) Print High Achievers (grade >= 15)
     public static void printHighAchievers(Student[] students) {
-
+        for (Student s: students){
+            if (s.getGrade() >= 15) System.out.println(s.getName());
+        }
     }
 
     // 8) Update Student Grade by id
