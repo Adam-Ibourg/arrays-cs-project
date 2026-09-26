@@ -57,7 +57,13 @@ public class ManageStudent {
 
     // 8) Update Student Grade by id
     public static boolean updateGrade(Student[] students, int id, int newGrade) {
-
+        for (Student s: students){
+            if (s.getId() == id) {
+                s.setGrade(newGrade);
+                return true;  // student found and the grade got modified
+            }
+        }
+        return false;  // student not found
     }
 
     // 9) Find Duplicate Names
