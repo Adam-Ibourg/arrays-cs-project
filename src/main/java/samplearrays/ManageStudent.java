@@ -7,7 +7,10 @@ public class ManageStudent {
 
     // 2) Find the Oldest Student
     public static Student findOldest(Student[] students) {
-
+        Student oldest = students[0];  // initial value for the variable
+        for (Student s: students){
+            if (s.getAge() > oldest.getAge()) oldest = s;  // comparing the age of current oldest with other students
+        }
         return oldest;
     }
 
