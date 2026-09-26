@@ -44,7 +44,10 @@ public class BankAccount {
     }
 
     public void displayTransactions(){
-
+        System.out.println("Transactions:");
+        for (int i = 0; i < transactionIndex; i++){
+            System.out.println(transactions[i]);  // displays only the recorded transactions instead of the whole array
+        }
     }
 
     public void displayBalance(){
