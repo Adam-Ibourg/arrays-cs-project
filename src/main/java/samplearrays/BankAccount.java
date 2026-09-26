@@ -29,7 +29,18 @@ public class BankAccount {
     }
 
     public void withdraw(double amount){
+        if (amount > currentBalance || amount <= 0) {
+            // error message for unsuccessful deposits
+            System.out.println("Enter a valid amount that's within your current balance's range");
+            return;
+        }
 
+        this.currentBalance -= amount;  // withdrawing the amount
+        transactions[transactionIndex] = -amount;  // recording the transaction in the array
+        transactionIndex++;
+
+        // displaying a successful withdrawal message
+        System.out.println("Successful withdrawal: {amount = " + amount + ", name: " + name + ", new balance = " + currentBalance + '}');
     }
 
     public void displayTransactions(){
