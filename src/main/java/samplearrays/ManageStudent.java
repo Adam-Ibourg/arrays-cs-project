@@ -25,7 +25,14 @@ public class ManageStudent {
 
     // 4) Average Grade (returns NaN if no students or grades)
     public static double averageGrade(Student[] students) {
+        if (students.length == 0) return Double.NaN;  // there are no students
 
+        int sum = 0;
+        for (Student s: students){
+            sum += s.getGrade();  // compute the sum of all grades
+        }
+
+        return (double) sum / students.length;  // compute the average
     }
 
     // 5) Search by Name (case-sensitive; change to equalsIgnoreCase if desired)
