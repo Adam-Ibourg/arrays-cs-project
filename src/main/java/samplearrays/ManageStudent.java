@@ -16,7 +16,11 @@ public class ManageStudent {
 
     // 3) Count Adult Students (age >= 18)
     public static int countAdults(Student[] students) {
-
+        int count = 0;
+        for (Student s: students){
+            if (s.isAdult()) count++;
+        }
+        return count;
     }
 
     // 4) Average Grade (returns NaN if no students or grades)
